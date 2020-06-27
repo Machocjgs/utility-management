@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "633489039935",
+    "firebase_url": "https://utility-monitoring-poc.firebaseio.com",
+    "project_id": "utility-monitoring-poc",
+    "storage_bucket": "utility-monitoring-poc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633489039935:android:96ab31e3f1cbcaafa08e8a",
+        "android_client_info": {
+          "package_name": "com.example.utilitymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633489039935-n77v258ksohhpp6db3f22ug3u2ghsdsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU0S1G0e1RuZ_UEG3_20LbSX1t_fWdRxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633489039935-n77v258ksohhpp6db3f22ug3u2ghsdsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
