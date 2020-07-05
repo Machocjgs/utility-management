@@ -27,6 +27,7 @@ dependencies:
   table_calendar: ^2.2.3
   intl: ^0.16.1
   cloud_firestore: ^0.13.7
+  firebase_auth: ^0.16.1
 
   cupertino_icons: ^0.1.3
 

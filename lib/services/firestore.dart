@@ -1,23 +1,41 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:utilitymanagement/model/record.dart';
+import 'package:utilitymanagement/model/user.dart';
 import 'package:utilitymanagement/utils/utils.dart';
 
 
 
-abstract class FireStoreService {
+abstract class RecordFireStoreService {
 
   Future<List<Record>> getUtilityRecords(String recordtype, String date);
 
   Future<Record> getUtilityDayRecord(String recordtype, String area, DateTime date);
 
   Future<void> addUtilityRecord(String recordtype, String date, Record recordData);
+}
 
-  
+abstract class UserFireStoreService {
+
+  Future<User> getUserDetailsByPhone(String phone);
 
 }
 
-class RecordService implements FireStoreService {
+class UserService implements UserFireStoreService{
+  final firestoreInstance = Firestore.instance;
+
+  Future<User> getUserDetailsByPhone(String phone) async {
+    DocumentSnapshot doc = await firestoreInstance.collection("accounts").document(phone).get();
+    if(doc.data != null) {
+      return User(doc.data['email'], doc.data['password'], doc.data['name'], doc.data['role']);
+    } else {
+      return null;
+    }
+  }
+
+}
+
+class RecordService implements RecordFireStoreService {
   // TODO: Implement Auth
   final firestoreInstance = Firestore.instance;
   final utilitycollection = "utility-monitoring";

@@ -90,7 +90,6 @@ class _UtilityManagementState extends State<UtilityManagement> {
               ),
             ],
           )
-          // child: Text("${recordList[index].area} : ${recordList[index].presentconsumption}"),
         );
       },
     );
